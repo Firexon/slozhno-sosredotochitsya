@@ -418,12 +418,15 @@ img {
     box-sizing: border-box;
     min-height: 668px;
     grid-template-columns: 375px;
+    grid-template-rows: repeat(4, 1fr);
     padding: 1%;
   }
 
   .top-right-corner-decoration {
     padding: 3% 0 1.3em;
-    width: auto;
+    width: 100%;
+    inset-inline-end: 0;
+    margin-inline-end: 2%;
   }
 
   .header__theme-menu {
@@ -433,12 +436,13 @@ img {
   .header__theme-menu-list {
     padding: 5% 3%;
     height: 100%;
-    margin-block-start: 5.5%;
+    margin-block-start: 8.5%;
   }
 
   .title {
     line-height: 96px;
-    margin: 0;
+    margin-block-start: 16%;
+    align-self: end;
   }
 
   .header-text-block {
@@ -446,7 +450,11 @@ img {
   }
 
   .header-text {
-    margin: 0 2%;
+    margin: 10% 2%;
+  }
+
+  .botton-left-corner {
+    margin-inline-start: 2%;
   }
 
   .content {
@@ -519,7 +527,6 @@ img {
       'books'
       'street';
   }
-
 
   .footer {
     padding: 3% 6%;
