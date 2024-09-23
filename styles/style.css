@@ -2,7 +2,7 @@
 
 .page {
   background-color: var(--bg-color);
-  background-image: url(../images/cover-image-dark.png);
+  background-image: var(--bg-img);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -28,7 +28,7 @@ a:focus {
   display: grid;
   grid-template-rows: 30% 40% 30%;
   position: relative;
-  min-height: 768px; /*надо пофиксить??*/
+  min-height: 768px;
   width: 100%;
 }
 
