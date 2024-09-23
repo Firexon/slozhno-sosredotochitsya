@@ -12,7 +12,7 @@
 
 a {
   color: var(--text-color);
-  text-shadow: 2px 2px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--bg-title);
   text-decoration: none;
 }
 
@@ -126,7 +126,7 @@ a:focus {
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-weight: bold;
   color: var(--title-color);
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 4px 4px 0 var(--text-shadow);
   align-self: center;
 }
 
@@ -141,7 +141,7 @@ a:focus {
 }
 
 .header-text {
-  background-color: var(--accent-color);
+  background-color: var(--bg-title);
   color: var(--item-title-color);
   font-family: var(--main-font, sans-serif);
   font-weight: bold;
@@ -152,7 +152,7 @@ a:focus {
 }
 
 .title-decor {
-  background-color: var(--accent-color);
+  background-color: var(--bg-title);
   color: var(--item-title-color);
   font-family: var(--main-font, sans-serif);
   font-weight: bold;
@@ -255,7 +255,7 @@ a:focus {
 }
 
 .title-decor-regular {
-  background-color: var(--accent-color);
+  background-color: var(--bg-title);
   color: var(--item-title-color);
   font-family: var(--main-font, sans-serif);
   font-size: 18px;
@@ -338,7 +338,7 @@ img {
   align-self: center;
   font-weight: bold;
   color: var(--title-color);
-  text-shadow: 2px 2px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--text-shadow);
   margin-block-start: 3%;
 }
 
@@ -516,80 +516,5 @@ img {
       'tape'
       'books'
       'street';
-  }
-}
-
-.theme_light.page {
-  background-image: url(../images/cover-image-light.png);
-}
-
-.theme_light .rec {
-  display: none;
-}
-
-.theme_light .top-right-corner::before {
-  display: none;
-}
-
-.theme_light .title-decor {
-  background-color: #ff8dcb;
-}
-
-.theme_light .title {
-  text-shadow: 4px 4px 0 #ff0070;
-}
-
-.theme_light .header-text {
-  background-color: #ff8dcb;
-}
-
-.theme_light a {
-  text-shadow: 2px 2px 0 #ff8dcb;
-}
-
-.theme_light .title-decor-regular {
-  background-color: #ff8dcb;
-}
-
-.theme_light .title-footer {
-  text-shadow: 2px 2px 0 #ff0070;
-}
-
-@media (prefers-color-scheme: light) {
-
-  .theme_auto.page {
-    background-image: url(../images/cover-image-light.png);
-  }
-
-  .theme_auto .rec {
-    display: none;
-  }
-
-  .theme_auto .top-right-corner::before {
-    display: none;
-  }
-
-  .theme_auto .title-decor {
-    background-color: #ff8dcb;
-  }
-
-  .theme_auto .title {
-    text-shadow: 4px 4px 0 #ff0070;
-  }
-
-  .theme_auto .header-text {
-    background-color: #ff8dcb;
-  }
-
-  .theme_auto a {
-    text-shadow: 2px 2px 0 #ff8dcb;
-  }
-
-  .theme_auto .title-decor-regular {
-    background-color: #ff8dcb;
-  }
-
-  .theme_auto .title-footer {
-    text-shadow: 2px 2px 0 #ff0070;
   }
 }

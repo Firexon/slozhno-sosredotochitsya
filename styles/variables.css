@@ -7,7 +7,9 @@
   --main-font: 'IBM Plex Mono';
   --text-color: #f1b2ce;
   --accent-color: #ff0070;
+  --bg-title: #ff0070;
   --bg-color: #000028;
+  --text-shadow: #ff0070;
   --title-color: #db00ff;
   --item-title-color: #000;
 }
