@@ -502,7 +502,7 @@ img {
 
   .gallery {
     padding: 3%;
-    margin-block-end: 17%;
+    margin-block-end: 21%;
   }
 
   .title-gallery {
@@ -520,7 +520,12 @@ img {
       'street';
   }
 
-  .title-footer {
-    margin-block-start: 7%;
+
+  .footer {
+    padding: 3% 6%;
   }
+
+  /* .title-footer {
+    margin-block-start: 7%;
+  } */
 }
