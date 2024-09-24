@@ -529,10 +529,7 @@ img {
   }
 
   .footer {
-    padding: 3% 6%;
+    grid-template-columns: 1fr;
+    padding: 2%;
   }
-
-  /* .title-footer {
-    margin-block-start: 7%;
-  } */
 }
