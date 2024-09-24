@@ -417,7 +417,7 @@ img {
   .decorated-zone {
     box-sizing: border-box;
     min-height: 668px;
-    grid-template-columns: 375px;
+    /* grid-template-columns: 375px; */
     grid-template-rows: repeat(4, 1fr);
     padding: 1%;
   }
