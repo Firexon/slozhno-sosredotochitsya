@@ -6,7 +6,7 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  margin: 0;
+  margin: auto;
   /* min-width: 1024px; */
 }
 
@@ -26,9 +26,10 @@ a:focus {
 
 .decorated-zone {
   display: grid;
-  grid-template-rows: 30% 40% 30%;
+  grid-template-rows: 30% 40% 20% 10%;
   position: relative;
-  min-height: 768px;
+  /* min-height: 768px; */
+  height: 100vh;
   width: 100%;
 }
 
@@ -47,13 +48,12 @@ a:focus {
   justify-content: flex-end;
   gap: 0.5em;
   position: absolute;
-  width: 100%;
   inset-inline-end: 1em;
   padding: 1.3em 0;
 }
 
 .rec {
-  font-family: var(--main-font, 'sanf-serif');
+  font-family: var(--main-font, monospace, 'sanf-serif');
   font-size: 18px;
   color: var(--accent-color);
   margin: 0;
@@ -64,25 +64,27 @@ a:focus {
   position: relative;
   border-bottom: none;
   border-left: none;
+  margin-inline-end: 5%;
 }
 
 .header .top-right-corner::before {
   /*кружочек*/
   display: block;
+  box-shadow: 0 0 4px 2px var(--accent-color);
   position: absolute;
   content: '';
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background-color: var(--accent-color);
-  margin-block-start: 0.3em;
+  margin-block-start: 27%;
   margin-inline-start: 0.2em;
 }
 
 .header__theme-menu-list {
   padding: 2%;
   font-size: 18px;
-  font-family: var(--main-font), sans-serif;
+  font-family: var(--main-font, monospace), sans-serif;
   display: flex;
   list-style-type: none;
   justify-content: center;
@@ -93,6 +95,7 @@ a:focus {
 }
 
 .header__theme-menu-button {
+  cursor: pointer;
   width: 70px;
   height: 26px;
   background-color: transparent;
@@ -100,12 +103,8 @@ a:focus {
   color: var(--accent-color);
   font-size: 18px;
   line-height: 18px;
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace, sans-serif);
   text-transform: lowercase;
-}
-
-.header__theme-menu-button_type_dark {
-  /* border: 1px solid var(--accent-color); */
 }
 
 .header__theme-menu-button_active {
@@ -122,7 +121,7 @@ a:focus {
 }
 
 .title {
-  font-family: var(--main-font), sans-serif;
+  font-family: var(--main-font, monospace), sans-serif;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-weight: bold;
   color: var(--title-color);
@@ -143,18 +142,18 @@ a:focus {
 .header-text {
   background-color: var(--bg-title);
   color: var(--item-title-color);
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace, sans-serif);
   font-weight: bold;
   font-size: 18px;
   width: max(calc(50% - 1em), 355px);
   height: min-content;
-  margin: 1em 1em 0 0;
+  margin: 1% 1em 0 0;
 }
 
 .title-decor {
   background-color: var(--bg-title);
   color: var(--item-title-color);
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace, sans-serif);
   font-weight: bold;
   font-size: 18px;
   margin: 0.5em 0;
@@ -168,7 +167,7 @@ a:focus {
   border: 1px solid var(--accent-color);
   border-top: none;
   border-right: none;
-  margin-inline-start: 1em;
+  margin-inline-start: 2%;
   margin-block-end: 1.2em;
 }
 
@@ -177,36 +176,41 @@ a:focus {
   font-size: 18px;
   line-height: 130%;
   width: 100%;
+  padding: 2.5% 2% 4%;
 }
 
-.content {
+/* .content {
   padding: 1.2em;
-}
+} */
 
-.content-section-1 {
+.content-section-why-difficult {
   margin-top: 2em;
   display: grid;
   grid-template-columns: calc(1 / 3 * 100%) calc(2 / 3 * 100%);
-  margin-block-end: 9%;
+  margin-block-end: 6.5%;
 }
 
 .content-section-title {
   color: var(--accent-color);
-  font-family: var(--main-font);
+  font-family: var(--main-font, monospace);
   font-weight: bold;
   font-size: 18px;
   margin-bottom: 0;
 }
 
-.content-section-1-title {
+.content-section-item-why-difficult {
+  margin-inline-start: 1%;
+}
+
+.content-section-why-difficult-title {
   grid-row: span 2;
   margin-inline-end: 1em;
   margin-block-start: 0;
 }
 
-.article-name-section-1 {
+/* .article-name-section-why-difficult {
   margin-top: 1em;
-}
+} */
 
 .no-margin-top {
   margin-top: 0;
@@ -214,20 +218,21 @@ a:focus {
 
 .content_text-block {
   color: var(--text-color);
-  font-family: var(--main-font);
+  font-family: var(--main-font, monospace);
   font-weight: normal;
-  margin: 0;
+  margin: 0 0 2%;
 }
 
-.content-section-2 {
+.content-section-reduces {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   /* grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));  */ /* так и не поняла как это реализовать*/
-  gap: 1em;
-  margin-block-end: 8%;
+  gap: 0.5em 1em;
+  margin-block-end: 6.5%;
 }
 
-.content-section-2-title {
+.content-section-reduces-title {
+  grid-column: span 3;
   color: var(--accent-color);
   width: calc(1 / 3 * 100%);
   margin-block-end: 1.5%;
@@ -236,40 +241,45 @@ a:focus {
 .list-title {
   margin-block-start: 0;
   margin-block-end: 1em;
+  margin-inline-start: 1%;
 }
 
-.content-section-3 {
+.content-section-item-concent-better {
+  margin-inline-start: 1%;
+}
+
+.content-section-concent-better {
   display: grid;
   grid-template-columns: calc(1 / 3 * 100%) calc(2 / 3 * 100%);
-  margin-block-end: 1em;
+  margin-block-end: 3.5em;
   padding-block-start: 1%;
 }
 
-.content-section-3-title {
+.content-section-concent-better-title {
   grid-row: span 6;
   color: var(--accent-color);
   margin-top: 0;
   font-size: 18px;
   font-weight: bold;
-  font-family: var(--main-font);
+  font-family: var(--main-font, monospace);
 }
 
 .title-decor-regular {
   background-color: var(--bg-title);
   color: var(--item-title-color);
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace, sans-serif);
   font-size: 18px;
   font-weight: normal;
   margin-block-start: 0;
   margin-block-end: 2%;
 }
 
-.content_text-block-3 {
+.content_text-block-concent-better {
   margin-block-end: 2.5%;
 }
 
 .gallery {
-  padding: 1.2em;
+  /* padding: 1.2em; */
   margin-block-end: 1.5em;
 }
 
@@ -319,7 +329,7 @@ img {
 
 .footer {
   display: grid;
-  grid-template-columns: calc(100vw - 2.4em);
+  /* grid-template-columns: calc(100vw - 2.4em); */
   min-height: calc(100vh - 2.4em);
   height: 100vh;
   max-width: 100%;
@@ -329,17 +339,17 @@ img {
 .footer .top-right-corner {
   justify-self: end;
   align-self: flex-start;
+  margin: 0;
 }
 
 .title-footer {
-  font-family: var(--main-font), sans-serif;
+  font-family: var(--main-font, monospace), sans-serif;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   justify-self: center;
   align-self: center;
   font-weight: bold;
   color: var(--title-color);
   text-shadow: 2px 2px 0 var(--text-shadow);
-  margin-block-start: 3%;
 }
 
 .footer .botton-left-corner {
@@ -348,7 +358,7 @@ img {
 }
 
 @media (width < 1024px) {
-
+  
   .page {
     max-width: 768px;
   }
@@ -364,41 +374,56 @@ img {
     gap: 0.7em;
   }
 
+  .header-text-block {
+    padding-block-start: 1%;
+  }
+
   .header-text {
     margin: 0 1em;
   }
 
-  .content-section-1 {
-    margin-block-end: 12%;
-  }
-
-  .content-section-item-1 {
+  .header .botton-left-corner {
     margin-inline-start: 3%;
   }
 
-  .content-section-2 {
+  .main {
+    padding: 3.5% 2.5% 4%;
+  }
+
+  .content-section-why-difficult {
+    margin-block-end: 10%;
+  }
+
+  .content-section-item-why-difficult {
+    margin-inline-start: 3%;
+  }
+
+  .content-section-reduces {
     grid-template-columns: 1fr;
-    gap: 3%;
+    gap: 0;
+    margin-block-end: 2.5%;
   }
 
-  .content-section-2-title {
+  .content-section-reduces-title {
+    grid-column: span 1;
     width: calc(1 / 5 * 100%);
+    margin-block-end: 1%;
   }
 
-  .content-section-2 .no-margin-top {
+  .content-section-reduces .no-margin-top {
     margin-top: 1%;
   }
 
-  .content-section-3 {
+  .content-section-concent-better {
     padding-block-start: 7%;
   }
 
-  .content-section-item-3,
+  .content-section-item-concent-better,
   .list-title {
     margin-inline-start: 3%;
   }
 
-  .content_text-block-3 {
+  .content_text-block-concent-better {
     margin-block-end: 4.5%;
   }
 
@@ -426,7 +451,12 @@ img {
     padding: 3% 0 1.3em;
     width: 100%;
     inset-inline-end: 0;
-    margin-inline-end: 2%;
+    gap: 0;
+    /* margin-inline-end: 2%; */
+  }
+
+  .header .top-right-corner {
+    margin-inline-end: 3%;
   }
 
   .header__theme-menu {
@@ -434,7 +464,7 @@ img {
   }
 
   .header__theme-menu-list {
-    padding: 5% 3%;
+    padding: 5% 2%;
     height: 100%;
     margin-block-start: 8.5%;
   }
@@ -450,66 +480,68 @@ img {
   }
 
   .header-text {
-    margin: 10% 2%;
+    margin: 15% 2% 8%;
   }
 
-  .botton-left-corner {
+  .header .botton-left-corner {
     margin-inline-start: 2%;
   }
 
-  .content {
-    padding: 0 3%;
+  .main {
+    padding: 0 3% 4%;
   }
 
-  .content-section-item-1 {
+  .content-section-item-why-difficult {
     margin: 0;
   }
 
-  .article-name-section-1 {
-    margin-top: 7%;
+  .article-name-section-why-difficult {
+    margin-block-start: 5%;
   }
 
-  .content-section-1 {
+  .content-section-why-difficult {
     grid-template-columns: 1fr;
+    margin-block-start: 11.5%;
   }
 
-  .content-section-2 {
+  .content-section-reduces {
     grid-template-columns: 1fr;
     gap: 0;
   }
 
-  .content-section-2-title {
+  .content-section-reduces-title {
+    grid-column: span 1;
     width: 100%;
-  }
-
-  .content-section-item-2 {
-    margin-block-start: 5%;
-  }
-
-  .content-section-3 {
-    grid-template-columns: 1fr;
-    padding-block-start: 6%;
-    margin-block-end: 8%;
-  }
-
-  .content-section-item-3,
-  .list-title {
-    margin-block-start: 6%;
-    margin-block-end: 3%;
-    margin-inline-start: 0;
-  }
-
-  .content-section-item-3 {
     margin-block-start: 2%;
   }
 
-  .content_text-block-3 {
+  .content-section-item-reduces {
+    margin-block-start: 3%;
+  }
+
+  .content-section-concent-better {
+    grid-template-columns: 1fr;
+    margin-block-start: 3%;
+    margin-block-end: 10%;
+  }
+
+  .content-section-item-concent-better,
+  .list-title {
+    margin-block-start: 6%;
+    margin-block-end: 3.4%;
+    margin-inline-start: 0;
+  }
+
+  .content-section-item-concent-better {
+    margin-block-start: 2%;
+  }
+
+  .content_text-block-concent-better {
     margin-block-start: 3%;
     margin-block-end: 1px;
   }
 
   .gallery {
-    padding: 3%;
     margin-block-end: 21%;
   }
 
