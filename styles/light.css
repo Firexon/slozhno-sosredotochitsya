@@ -16,8 +16,6 @@
   --item-title-color: #353430;
 }
 
-/*сохранить впеременную*/
-
 .theme_light.page {
   background-image: url(../images/cover-image-light.png);
 }
@@ -31,7 +29,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-  
+
   :root {
     --bg-img: url(../images/cover-image-light.png);
     --main-font: 'IBM Plex Mono';
